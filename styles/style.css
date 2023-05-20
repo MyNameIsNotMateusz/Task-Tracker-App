@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: "Ubuntu";
+}
+
+body{
+    background-image: url("/images/forest-5889923.png");
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.containerBacklog h1{
+    margin-right: 50px;
+}
+
+.containerReady h1{
+    margin-right: 78px;
+}
+
+.containerDoing h1{
+    margin-right: 81px;
+}
+
+
+.box {
+    margin-top: 50px;
+    width: 209px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    padding: 20px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 50px;
+
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.box label{
+    font-size: large;
+    font-weight: 700;
+}
+
+.box select{
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.box textarea{
+    margin-top: 20px; 
+    border: none;
+    width: 209px;
+    height: 150px;
+    resize: none;
+    background-color: #f2f2f2;
+}
+
+.box select{
+    margin-left: 5px;
+    border: 1px solid;
+}
+
+.plus {
+    cursor: pointer;
+}
+
+.trash {
+    margin-left: 25px;
+}

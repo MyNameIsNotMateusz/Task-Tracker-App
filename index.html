@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./scripts/addNewTask.js"></script>
+    <script defer src="./scripts/sortTasks.js"></script>
+    <script defer src="./scripts/taskCount.js"></script>
+    <script defer src="./scripts/dragAndDrop.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Task Tracker</title>
+</head>
+
+<body>
+    <div class="container">
+        <div 
+        id="containerBacklog"
+        class="containerBacklog"
+        ondragover="dragOver(event)" 
+        ondrop="drop(event)"
+        >
+            <div class="header">
+                <h1>
+                    Backlog
+                    <i id="addNewTaskToBacklog" class="plus fa-solid fa-plus fa-bounce fa-sm"></i>
+                </h1>
+                <h2>
+                    <i class="fa-solid fa-face-angry fa-fade"></i>
+                    <span id="taskBacklogCount">1</span>
+                </h2>
+            </div>
+            <div 
+            id="spaceForBacklog">   
+            </div>
+        </div>
+        <div 
+        id="containerReady"
+        class="containerReady"
+        ondragover="dragOver(event)" 
+        ondrop="drop(event)">
+            <div class="header">
+                <h1>
+                    Ready
+                    <i id="addNewTaskToReady" class="plus fa-solid fa-plus fa-bounce fa-sm"></i>
+                </h1>
+                <h2>
+                    <i class="fa-solid fa-face-smile-beam fa-fade"></i>
+                    <span id="taskReadyCount">1</span>
+                </h2>
+            </div>
+            <div 
+            id="spaceForReady">
+            </div>
+        </div>
+        <div 
+        id="containerDoing"
+        class="containerDoing"
+        ondragover="dragOver(event)" 
+        ondrop="drop(event)">
+            <div class="header">
+                <h1>
+                    Doing
+                    <i 
+                    id="addNewTaskToDoing"
+                    class="plus fa-solid fa-plus fa-bounce fa-sm"></i>
+                </h1>
+                <h2>
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    <span id="taskDoingCount">1</span>
+                </h2>
+            </div>
+            <div 
+            id="spaceForDoing">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
